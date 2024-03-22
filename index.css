@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--outfit), sans-serif;
+    color: var(--wenge-brown)
+}
+
+:root{
+    --dark-charcoal: #312E2C;
+    --dark-raspberry: #7A284E;
+    --brandy-red: #854632;
+    --wenge-brown: #5F564D;
+    --eggshell: #F3E5D7;
+    --white-coffee: #E3DDD7;
+    --snow: #FFF7FB;
+    --outfit: 'Outfit';
+    --young-serif: 'Young Serif';
+}
+
+body{
+    background-color: hsl(30, 54%, 90%);
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1, h2, h4, h6{
+    font-family: var(--young-serif);
+}
+
+h1{
+ color: var(--dark-charcoal);
+}
+
+h2{
+    color: var(--brandy-red);
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.recipe{
+    background-color: hsl(330, 100%, 98%);
+    max-width: 46rem;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.main-img{
+    /* max-width: calc(100% - 80px);  */
+    /* 100% of parents width - 40px padding on both sides */
+    margin-bottom: 30px;
+    border-radius: 15px;
+
+}
+
+[class~=Nutritional-info]{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.bb{
+    border-bottom: 1px solid grey;
+    padding: 20px 0 10px 10px;
+}
+
+[class~=prep-p]{
+    background-color: var(--eggshell);
+    border-radius: 10px;
+    padding: 30px;
+    line-height: 2;
+}
+
+[class~=prep-list]::marker{
+    color: var(--dark-raspberry);
+}
+
+.wenge-brown{
+    color: var(--wenge-brown);
+}
+
+.ingredients-list::marker, .instructions-list::marker{
+    color: var(--brandy-red);
+}
+
+hr{
+    color: var(--white-coffee);
+}
+
+.spacing{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+li{
+    padding-left: 15px;
+}
